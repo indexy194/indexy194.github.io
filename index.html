@@ -42,9 +42,8 @@
         }
         // function for send message
         function phoneAuth() {
-            var number = document.getElementById('number');
-            const phoneNumber = number.value;
-            firebase.auth().signInWithPhoneNumber(phoneNumber,
+            var number = document.getElementById('number').value;
+            firebase.auth().signInWithPhoneNumber(number,
                 window.recaptchaVerifier).then(function (confirmationResult) {
                     window.confirmationResult = confirmationResult;
                     coderesult = confirmationResult;
